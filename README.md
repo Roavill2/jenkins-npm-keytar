@@ -23,3 +23,10 @@ To correct this, issue the following console command before you attempt to acces
 ```
 echo 'jenkins' | gnome-keyring-daemon -r -d --unlock
 ```
+
+If you are still experiencing the `No such interface` error after executing the above command and you are using this container as your base, please add the following items as the last operations in your dockerfile:
+
+```Dockerfile
+USER root
+CMD ["/usr/sbin/sshd", "-D"]
+```
