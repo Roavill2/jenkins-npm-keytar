@@ -1,4 +1,4 @@
-workflow "Lint and Test" {
+workflow "Build and Publish" {
   on = "push"
   resolves = ["Publish"]
 }
