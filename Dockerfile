@@ -5,7 +5,7 @@ FROM ahumanfromca/jenkins-npm-agent
 USER root
 
 # Installs the libsecret library required by keytar
-RUN apt-get update && apt-get install -y gnome-keyring libsecret-1-dev
+RUN apt-get update && apt-get install -y gnome-keyring libsecret-1-dev telnet
 
 ARG tempDir=/tmp/jenkins-npm-keytar
 ARG sshEnv=/etc/profile.d/dbus_start.sh
